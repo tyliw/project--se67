@@ -7,7 +7,7 @@ import (
 	"project-se67/controller/genders"
 	"project-se67/controller/payment" // สำหรับการเรียกใช้งาน payment controller
 	"project-se67/controller/users"
-	// "project-se67/middlewares"
+	"project-se67/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,7 +21,7 @@ func main() {
 	config.SetupDatabase()
 
 	r := gin.Default()
-	// r.Use(CORSMiddleware()) // ใช้งาน CORS middleware
+	r.Use(CORSMiddleware()) // ใช้งาน CORS middleware
 
 	// Auth Route
 	r.POST("/signup", users.SignUp)
@@ -31,7 +31,7 @@ func main() {
 
 	router := r.Group("/")
 	{
-		// router.Use(middlewares.Authorizes())
+		router.Use(middlewares.Authorizes())
 
 		// User Route
 

@@ -32,7 +32,7 @@ func SetupUserDatabase() {
 	db.FirstOrCreate(&GenderFemale, &entity.Genders{Gender: "Female"})
  
  
-	hashedPassword, _ := HashPassword("123456")
+	hashedPassword, _ := HashPassword("123")
  
 	BirthDay, _ := time.Parse("2006-01-02", "1988-11-12")
  

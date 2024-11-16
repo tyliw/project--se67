@@ -6,7 +6,7 @@ import (
  
  type Menu struct {
 	gorm.Model
-	MenuList 	string
+	MenuName 	string
 	Price 		float32
 	Description string
 	ImageMenu   string 	`gorm:"type:longtext"`
