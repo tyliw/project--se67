@@ -17,35 +17,35 @@ const requestOptions = {
 
 async function GetOrderDetail() {
   return await axios
-    .get(`${apiUrl}/orders`, requestOptions)
+    .get(`${apiUrl}/orderdetails`, requestOptions)
     .then((res) => res)
     .catch((e) => e.response);
 }
 
 async function GetOrderDetailById(id: string) {
   return await axios
-    .get(`${apiUrl}/order/${id}`, requestOptions)
+    .get(`${apiUrl}/orderdetail/${id}`, requestOptions)
     .then((res) => res)
     .catch((e) => e.response);
 }
 
 async function CreateOrderDetail(data: OrderDetailInterface) {
   return await axios
-    .post(`${apiUrl}/order`, data, requestOptions)
+    .post(`${apiUrl}/orderdetail`, data, requestOptions)
     .then((res) => res)
     .catch((e) => e.response);
 }
 
 async function UpdateOrderDetailById(id: string, data: OrderDetailInterface) {
   return await axios
-    .put(`${apiUrl}/order/${id}`, data, requestOptions)
+    .put(`${apiUrl}/orderdetail/${id}`, data, requestOptions)
     .then((res) => res)
     .catch((e) => e.response);
 }
 
 async function DeleteOrderDetailById(id: string) {
   return await axios
-    .delete(`${apiUrl}/order/${id}`, requestOptions)
+    .delete(`${apiUrl}/orderdetail/${id}`, requestOptions)
     .then((res) => res)
     .catch((e) => e.response);
 }

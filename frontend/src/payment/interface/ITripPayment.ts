@@ -1,6 +1,6 @@
-export interface TripPaymenInterface {
+export interface TripPaymentInterface {
     ID?: number;
-    PaymentDate?: string;
+    PaymentDate?: Date;
     TotalPrice?: number;
     Status?: string;
     PaymentMethod?: string;

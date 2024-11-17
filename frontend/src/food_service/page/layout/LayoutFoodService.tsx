@@ -1,27 +1,24 @@
 import { useState } from 'react';
 import { OrderDetailInterface } from '../../interface/IOrderDetail';
-import CruiseShipLogo from '../../../assets/cruise_ship_logo.jpg';
 import MenuList from '../menu_list/MenuList';
 import OrderList from '../order_list/OrderList';
-import { TiShoppingCart } from "react-icons/ti";
-import { CgProfile } from "react-icons/cg";
 import './index.css';
 
 const LayoutFoodService: React.FC = () => {
   const [selectMenu, setSelectMenu] = useState<OrderDetailInterface[]>([]);
 
+  // useEffect(() => {
+  //   // Clear selectMenu when the component is mounted or refreshed
+  //   setSelectMenu([]);
+
+  //   // Optionally, if you need to clear `selectMenu` when navigating away from the page
+  //   return () => {
+  //     setSelectMenu([]);
+  //   };
+  // }, []); // Empty dependency array means this runs once when the component mounts
+
   return (
     <div className="container">
-      <header className="navbar">
-        <div>
-          <img src={CruiseShipLogo} className="cruise-ship-logo-logo" />
-        </div>
-        <div className="menu">
-          <a href=""> <CgProfile size={35} /> </a>
-          <a href="/cart"> <TiShoppingCart size={35} /> </a>
-        </div>
-      </header>
-
       <section className="menu-category"></section>
 
       <section className="content">
@@ -37,6 +34,5 @@ const LayoutFoodService: React.FC = () => {
     </div>
   );
 };
-
 
 export default LayoutFoodService;

@@ -37,7 +37,7 @@ function SignInPages() {
 
       setTimeout(() => {
 
-        location.href = "/login";
+        location.href = "/login/menu";
 
       }, 2000);
 

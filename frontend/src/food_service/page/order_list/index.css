@@ -2,12 +2,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    width: 400px;
-    height: 560px;
+    gap: 16px;
+    /* width: 400px; */
+    /* height: 500px; */
     /* top: 100px; */
-    padding: 10px;
+    padding: 16px;
     border-radius: 20px;
     background-color: #F3F3E0;
     z-index: 10;
@@ -16,10 +17,8 @@
 .my-order .order-detail {
     /* position: absolute; */
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
     width: 390px;
     /* height: 120px; */
     max-height: 240px;
@@ -166,13 +165,14 @@ input.quantity {
         border: 4px solid #133E87;
         color: #ffffff;
         cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-        transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+
+        transition: background-color 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
     }
 
     .confirm-order-button:hover {
         background-color: #ffffff;
         border: 4px solid #133E87;
         color: #133E87;
+        box-shadow: #133e87 0px 3px 8px;
     }
 }

@@ -30,7 +30,7 @@ import {
   
   import { UsersInterface } from "../../interfaces/IUser";
   
-  import logo from "../../../assets/logo.png";
+  import logo from "../../assets/logo.png";
   
   
   function SignUpPages() {

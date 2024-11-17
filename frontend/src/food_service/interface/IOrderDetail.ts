@@ -5,8 +5,10 @@ export interface OrderDetailInterface {
   ID?: number;
   Quantity: number;
   Amount: number;
+  
   MenuID: number;
   Menu?: MenuInterface;
+
   OrderID: number;
   Order?: OrderInterface;
 }
